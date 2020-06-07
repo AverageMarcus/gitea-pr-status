@@ -4,10 +4,16 @@ Docker image for updating PR status in Gitea
 
 ## Features
 
-## Install
+## Usage
 
 ```sh
-
+docker run --it \
+  -e GITEA_HOST=YOUR_GITEA_HOST \
+  -e ACCESS_TOKEN=YOUR_GITEA_ACCESS_TOKEN\
+  docker.cluster.fun/averagemarcus/gitea-pr-status \
+  "YOUR_USER/YOUR_REPO" \
+  "GIT_COMMIT_SHA" \
+  "PR_STATUS"
 ```
 
 ## Building from source
@@ -18,13 +24,9 @@ With Docker:
 make docker-build
 ```
 
-Standalone:
-
-```sh
-make build
-```
-
 ## Resources
+
+* [API Documentation](https://try.gitea.io/api/swagger#/repository/repoCreateStatus)
 
 ## Contributing
 

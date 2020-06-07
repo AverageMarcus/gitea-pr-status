@@ -6,6 +6,6 @@ ADD giteaPR.sh /
 RUN chmod +x /giteaPR.sh
 
 ENV GITEA_HOST=git.cluster.fun
-ENV ACCESS_KEY=
+ENV ACCESS_TOKEN=
 
 ENTRYPOINT [ "/giteaPR.sh" ]
